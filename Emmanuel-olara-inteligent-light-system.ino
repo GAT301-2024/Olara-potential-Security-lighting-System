@@ -263,7 +263,115 @@ const char *dashboardPage = R"rawliteral(
   <title>Secure Lighting Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* (Keep the same dashboard styles as before) */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+    
+    .login-container {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      width: 350px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    
+    .logo {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #4CAF50;
+    }
+    
+    h1 {
+      margin-bottom: 30px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    
+    .instructions {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    
+    .instructions ol {
+      padding-left: 20px;
+    }
+    
+    .instructions li {
+      margin-bottom: 10px;
+    }
+    
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #4CAF50, #2E7D32);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 10px;
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .error-message {
+      color: #ff5252;
+      margin-top: 15px;
+      font-weight: 500;
+      display: none;
+    }
+    
+    .lockout-message {
+      color: #ff9800;
+      margin-top: 20px;
+      font-weight: 500;
+      display: none;
+    }
+    
+    .footer {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
   </style>
 </head>
 <body>
